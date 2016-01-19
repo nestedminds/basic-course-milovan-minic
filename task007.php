@@ -33,13 +33,11 @@ foreach($additionalCities as $additionalCity){
 sort($largestCities);
 
 // Create list
-echo '<li>';
+echo '<ul>';
 
 // Populate list
 foreach($largestCities as $largeCity) {
-    echo '<ul>';
-        echo $largeCity;
-    echo '</ul>';
+    echo '<li>' . $largeCity . '</li>';
 }
 
-echo '</li>';
+echo '</ul>';
