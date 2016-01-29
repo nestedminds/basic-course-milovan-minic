@@ -18,7 +18,11 @@
 
 session_start();
 
-$_SESSION['modesOfTransportation'] = array('Automobile', 'Jet', 'Ferry', 'Subway');
+if(empty($_SESSION['modesOfTransportation'])) {
+
+    $_SESSION['modesOfTransportation'] = array('Automobile', 'Jet', 'Ferry', 'Subway');
+
+}
 
 //$modesOfTransportation = array('Automobile', 'Jet', 'Ferry', 'Subway');
 
