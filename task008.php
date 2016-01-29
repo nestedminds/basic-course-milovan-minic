@@ -70,7 +70,7 @@ if(isset($_GET['transport_modes'])) {
     }
 
 //    print_r($additionalTransportModes);
-    print_r($_SESSION['modesOfTransportation']);
+//    print_r($_SESSION['modesOfTransportation']);
 
     echo '<ul>';
     foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
@@ -95,7 +95,7 @@ if(isset($_GET['transport_modes'])) {
 
     }
 
-print_r($_SESSION['modesOfTransportation']);
+//print_r($_SESSION['modesOfTransportation']);
 
     echo '<ul>';
     foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
