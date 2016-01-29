@@ -16,15 +16,18 @@
  * add items as many times as they like.
  */
 
+session_start();
 
-$modesOfTransportation = array('Automobile', 'Jet', 'Ferry', 'Subway');
+$_SESSION['modesOfTransportation'] = array('Automobile', 'Jet', 'Ferry', 'Subway');
+
+//$modesOfTransportation = array('Automobile', 'Jet', 'Ferry', 'Subway');
 
 echo 'Travel takes many forms, whether across town, across the country,
  * or around the world.<br />
  Here is a list of some common modes of transportation: ';
 
 echo '<ul>';
-foreach($modesOfTransportation as $modeOfTransportation){
+foreach($_SESSION['modesOfTransportation'] as $modeOfTransportation){
     echo '<li>' . $modeOfTransportation . '</li>';
 }
 echo '</ul>';
@@ -46,7 +49,7 @@ echo '</ul>';
 
 
 <?php
-global $modesOfTransportation;
+//global $modesOfTransportation;
 if(isset($_GET['transport_modes'])) {
     $additionalTransportModesString = $_GET['transport_modes'];
 
@@ -59,13 +62,14 @@ if(isset($_GET['transport_modes'])) {
 
     // Add additional transportation modes to already existing modes
     foreach ($additionalTransportModesArray as $additionalTransportMode) {
-        $modesOfTransportation[] = $additionalTransportMode;
+        $_SESSION['modesOfTransportation'][] = $additionalTransportMode;
     }
 
 //    print_r($additionalTransportModes);
+    print_r($_SESSION['modesOfTransportation']);
 
     echo '<ul>';
-    foreach ($modesOfTransportation as $modeOfTransportation) {
+    foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
         echo '<li>' . $modeOfTransportation . '</li>';
     }
     echo '</ul>';
@@ -78,17 +82,19 @@ if(isset($_GET['transport_modes'])) {
     </form>
 
 <?php
-global $modesOfTransportation;
+//global $modesOfTransportation;
     if (isset($_GET['another_transport_mode'])) {
         $anotherTransportationMode = $_GET['another_transport_mode'];
 //        print_r($anotherTransportationMode);
-        $modesOfTransportation[] = $anotherTransportationMode;
+        $_SESSION['modesOfTransportation'][] = $anotherTransportationMode;
 //        print_r($modesOfTransportation);
 
     }
 
+print_r($_SESSION['modesOfTransportation']);
+
     echo '<ul>';
-    foreach ($modesOfTransportation as $modeOfTransportation) {
+    foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
         echo '<li>' . $modeOfTransportation . '</li>';
     }
     echo '</ul>';
