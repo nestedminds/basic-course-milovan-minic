@@ -20,7 +20,7 @@
  * back button with the error message. (If you completed Forms Ex. #6, you have already written one
  * of those.) The email field is a special case. Not only can you check for the presence of data, you
  * can check for an @(at symbol), which would be included in any valid email address. So here the data
- * must satify two conditions to be acceptable. You can use the strpos() function to confirm the presence
+ * must satisfy two conditions to be acceptable. You can use the strpos() function to confirm the presence
  * of the @ character.
  */
 

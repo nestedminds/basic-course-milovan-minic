@@ -46,7 +46,7 @@ echo '</ul>';
 
 
 <?php
-
+global $modesOfTransportation;
 if(isset($_GET['transport_modes'])) {
     $additionalTransportModesString = $_GET['transport_modes'];
 
@@ -69,7 +69,7 @@ if(isset($_GET['transport_modes'])) {
         echo '<li>' . $modeOfTransportation . '</li>';
     }
     echo '</ul>';
-
+}
 ?>
     <p>Add more?</p>
     <form method="get" action="task008.php">
@@ -78,11 +78,12 @@ if(isset($_GET['transport_modes'])) {
     </form>
 
 <?php
+global $modesOfTransportation;
     if (isset($_GET['another_transport_mode'])) {
         $anotherTransportationMode = $_GET['another_transport_mode'];
-        print_r($anotherTransportationMode);
+//        print_r($anotherTransportationMode);
         $modesOfTransportation[] = $anotherTransportationMode;
-        print_r($modesOfTransportation);
+//        print_r($modesOfTransportation);
 
     }
 
@@ -91,6 +92,6 @@ if(isset($_GET['transport_modes'])) {
         echo '<li>' . $modeOfTransportation . '</li>';
     }
     echo '</ul>';
-}
+
 
 ?>
