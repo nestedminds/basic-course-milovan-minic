@@ -1,5 +1,4 @@
 <?php
-
 /**
  * In the next PHP exercise, you will request input from the user, then move the user's response from
  * one file to another and do something with it.
@@ -14,5 +13,20 @@
  * exercises, but this particular array needs to come into play here.
  * The array variable is $_POST['name'] , where 'name' is the name of your input field.
  */
+?>
 
+<html>
 
+    <head>
+        <title>Favourite City</title>
+    </head>
+
+    <body>
+    <p>Enter the name of your favourite city here:</p>
+        <form action="task012_2.php" method="post">
+            <input type="text" name="name">
+            <input type="submit" value="Go">
+        </form>
+    </body>
+
+</html>
