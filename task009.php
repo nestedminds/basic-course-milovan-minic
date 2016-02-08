@@ -38,14 +38,14 @@ $cities = array('Japan'=>'Tokyo',
                 <option value=0>-- SELECT CITY --</option>
                 <?php
                     foreach($cities as $country=>$city){
-                        echo "<option value=$city>$city</option>";
+                        echo '<option value="' . $city .'">' . $city . '</option>';
                     }
                 ?>
             </select>
             <input type="submit" value="Go">
         </form>
         <?php
-        if(isset($_GET['cities'])) {
+        if(isset($_GET['cities']) && $_GET['cities'] != 0) {
 
             $city = $_GET['cities'];
             $country = array_search($city, $cities);
