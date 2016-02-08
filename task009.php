@@ -14,3 +14,46 @@
  * where $city is the value chosen by the user, and $country is its key.
  */
 
+$cities = array('Japan'=>'Tokyo',
+                'Mexico'=>'Mexico City',
+                'USA'=>'New York City',
+                'India'=>'Mumbai',
+                'Korea'=>'Seoul',
+                'China'=>'Shanghai',
+                'Nigeria'=>'Lagos',
+                'Argentina'=>'Buenos Aires',
+                'Egypt'=>'Cairo',
+                'England'=>'London');
+?>
+
+<html>
+    <head>
+        <title>Cities and Countries</title>
+    </head>
+
+    <body>
+        <form method="get" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            Select City from the list:
+            <select name="cities">
+                <option value=0>-- SELECT CITY --</option>
+                <?php
+                    foreach($cities as $country=>$city){
+                        echo "<option value=$city>$city</option>";
+                    }
+                ?>
+            </select>
+            <input type="submit" value="Go">
+        </form>
+        <?php
+        if(isset($_GET['cities'])) {
+
+            $city = $_GET['cities'];
+            $country = array_search($city, $cities);
+
+            echo "You have selected $city that is in $country";
+        }
+        ?>
+    </body>
+</html>
+
+
