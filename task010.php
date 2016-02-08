@@ -27,4 +27,49 @@
  * </style>
  */
 
+$multiCity = array( ['City', 'Country', 'Continent'],
+                    ['Tokyo', 'Japan', 'Asia'],
+                    ['Mexico City', 'Mexico', 'North America'],
+                    ['New York City', 'USA', 'North America'],
+                    ['Mumbai', 'India', 'Asia'],
+                    ['Seoul', 'Korea', 'Asia'],
+                    ['Shanghai', 'China', 'Asia'],
+                    ['Lagos', 'Nigeria', 'Africa'],
+                    ['Buenos Aires', 'Argentina', 'South America'],
+                    ['Cairo', 'Egypt', 'Africa'],
+                    ['London', 'UK', 'Europe']);
+
+//var_dump($multiCity);
+?>
+
+<html>
+    <head>
+        <title>Task010</title>
+        <style type="text/css">
+            td, th {width: 8em; border: 1px solid black; padding-left: 4px;}
+            th {text-align:center;}
+            table {border-collapse: collapse; border: 1px solid black;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <th><?php echo $multiCity[0][0]; ?></th>
+                <th><?php echo $multiCity[0][1]; ?></th>
+                <th><?php echo $multiCity[0][2]; ?></th>
+            </tr>
+            <?php
+            for($i = 1; $i < count($multiCity); $i++) {
+                echo '<tr>';
+                foreach($multiCity[$i] as $cell) {
+                    echo "<td>$cell</td>";
+                    }
+            echo '</tr>';
+            }
+            ?>
+        </table>
+    </body>
+</html>
+
 
