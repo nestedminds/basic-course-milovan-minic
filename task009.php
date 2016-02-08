@@ -35,7 +35,7 @@ $cities = array('Japan'=>'Tokyo',
         <form method="get" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             Select City from the list:
             <select name="cities">
-                <option value=0>-- SELECT CITY --</option>
+                <option value="0">-- SELECT CITY --</option>
                 <?php
                     foreach($cities as $country=>$city){
                         echo '<option value="' . $city .'">' . $city . '</option>';
@@ -45,7 +45,7 @@ $cities = array('Japan'=>'Tokyo',
             <input type="submit" value="Go">
         </form>
         <?php
-        if(isset($_GET['cities']) && $_GET['cities'] != 0) {
+        if(isset($_GET['cities']) && $_GET['cities'] != "0") {
 
             $city = $_GET['cities'];
             $country = array_search($city, $cities);
