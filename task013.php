@@ -13,7 +13,7 @@
  * field, and $value, an array to provide the option values. You will also need four methods in addition
  * to the two methods you will adapt from Functions Ex. #8: setName, getName, setValue, getValue.
  * Checking to be sure the value is an array belongs in the setValue method, so write that here, and
- * delete it from from makeSelect if you are using your script from Functions #8. Now we come to the two
+ * delete it from makeSelect if you are using your script from Functions #8. Now we come to the two
  * functions you wrote to generate the select field for Functions Ex. #8. Change the makeOptions function
  * to iterate over the array argument's values rather than keys. This will be your fifth method. Then
  * revise the makeSelect function to be the sixth method in your class. Next comes the HTML. Write a user

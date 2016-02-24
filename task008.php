@@ -24,8 +24,6 @@ if(empty($_SESSION['modesOfTransportation'])) {
 
 }
 
-//$modesOfTransportation = array('Automobile', 'Jet', 'Ferry', 'Subway');
-
 echo 'Travel takes many forms, whether across town, across the country,
  * or around the world.<br />
  Here is a list of some common modes of transportation: ';
@@ -69,8 +67,6 @@ if(isset($_GET['transport_modes'])) {
         $_SESSION['modesOfTransportation'][] = $additionalTransportMode;
     }
 
-//    print_r($additionalTransportModes);
-//    print_r($_SESSION['modesOfTransportation']);
 
     echo '<ul>';
     foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
@@ -89,13 +85,8 @@ if(isset($_GET['transport_modes'])) {
 //global $modesOfTransportation;
     if (isset($_GET['another_transport_mode'])) {
         $anotherTransportationMode = $_GET['another_transport_mode'];
-//        print_r($anotherTransportationMode);
         $_SESSION['modesOfTransportation'][] = $anotherTransportationMode;
-//        print_r($modesOfTransportation);
-
     }
-
-//print_r($_SESSION['modesOfTransportation']);
 
     echo '<ul>';
     foreach ($_SESSION['modesOfTransportation'] as $modeOfTransportation) {
