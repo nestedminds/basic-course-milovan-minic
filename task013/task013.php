@@ -27,6 +27,8 @@
  * using PHP with mySQL or other databases is beyond the scope of this website.
  */
 
+namespace task013;
+
 $browserTypes = array('', 'Firefox', 'Chrome', 'Internet Explorer', 'Safari', 'Opera', 'Other');
 
 class Select
@@ -34,33 +36,25 @@ class Select
     private $name;
     private $value;
 
-    /**
-     * @return mixed
-     */
+    /** @return mixed */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @param mixed $name
-     */
+    /** @param mixed $name */
     public function setName($name)
     {
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
+    /** @return mixed */
     public function getValue()
     {
         return $this->value;
     }
 
-    /**
-     * @param mixed $value
-     */
+    /** @param mixed $value */
     public function setValue($value)
     {
         $this->value = $value;
