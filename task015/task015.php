@@ -111,3 +111,4 @@ class Select {
 </html>
 
 
+<?php unset($select); ?>
